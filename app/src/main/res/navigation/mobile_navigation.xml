@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="chefpork.ppoo.chef101.nav_drawer_fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_recipes_fragment"
+            app:destination="@id/recipe_list_fragment"
+            app:enterAnim="@anim/anim_in"
+            app:exitAnim="@anim/anim_out"
+            app:popEnterAnim="@anim/anim_back_in"
+            app:popExitAnim="@anim/anim_back_out" />
+        <action
+            android:id="@+id/action_nav_home_to_tips_fragment"
+            app:destination="@id/tips_fragment"
+            app:enterAnim="@anim/anim_in"
+            app:exitAnim="@anim/anim_out"
+            app:popEnterAnim="@anim/anim_back_in"
+            app:popExitAnim="@anim/anim_back_out" />
+        <action
+            android:id="@+id/action_nav_home_to_chooseConverterFragment"
+            app:destination="@id/nav_choose_converter_fragment"
+            app:enterAnim="@anim/anim_in"
+            app:exitAnim="@anim/anim_out"
+            app:popEnterAnim="@anim/anim_back_in"
+            app:popExitAnim="@anim/anim_back_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="chefpork.ppoo.chef101.nav_drawer_fragments.ContactFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/recipe_list_fragment"
+        android:name="chefpork.ppoo.chef101.fragments.RecipeListFragment"
+        tools:layout="@layout/fragment_recipe_list" >
+        <action
+            android:id="@+id/action_recipe_list_fragment_to_recipe_fragment"
+            app:destination="@id/recipe_fragment"
+            app:enterAnim="@anim/anim_in"
+            app:exitAnim="@anim/anim_out"
+            app:popEnterAnim="@anim/anim_back_in"
+            app:popExitAnim="@anim/anim_back_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/converter_fragment"
+        android:name="chefpork.ppoo.chef101.fragments.ConverterFragment"
+        tools:layout="@layout/fragment_converter" />
+
+    <fragment
+        android:id="@+id/tips_fragment"
+        android:name="chefpork.ppoo.chef101.fragments.TipsFragment"
+        tools:layout="@layout/fragment_tips" />
+    <fragment
+        android:id="@+id/recipe_fragment"
+        android:name="chefpork.ppoo.chef101.fragments.RecipeFragment"
+        android:label=""
+        tools:layout="@layout/fragment_recipe" >
+        <action
+            android:id="@+id/action_recipe_fragment_to_ingredients_fragment"
+            app:destination="@id/ingredients_fragment"
+            app:enterAnim="@anim/anim_in"
+            app:exitAnim="@anim/anim_out"
+            app:popEnterAnim="@anim/anim_back_in"
+            app:popExitAnim="@anim/anim_back_out" />
+        <action
+            android:id="@+id/action_recipe_fragment_to_instructions_fragment"
+            app:destination="@id/instructions_fragment"
+            app:enterAnim="@anim/anim_in"
+            app:exitAnim="@anim/anim_out"
+            app:popEnterAnim="@anim/anim_back_in"
+            app:popExitAnim="@anim/anim_back_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredients_fragment"
+        android:name="chefpork.ppoo.chef101.fragments.recycler_fragments.IngredientsFragment"
+        android:label="Ingredients"
+        tools:layout="@layout/fragment_ingredients" />
+    <fragment
+        android:id="@+id/instructions_fragment"
+        android:name="chefpork.ppoo.chef101.fragments.recycler_fragments.InstructionsFragment"
+        android:label="Instructions"
+        tools:layout="@layout/fragment_instructions" />
+    <fragment
+        android:id="@+id/nav_choose_converter_fragment"
+        android:name="chefpork.ppoo.chef101.fragments.ChooseConverterFragment"
+        android:label="Choose a Unit"
+        tools:layout="@layout/fragment_choose_converter">
+        <action
+            android:id="@+id/action_chooseConverterFragment_to_converter_fragment"
+            app:destination="@id/converter_fragment"
+            app:enterAnim="@anim/anim_in"
+            app:exitAnim="@anim/anim_out"
+            app:popEnterAnim="@anim/anim_back_in"
+            app:popExitAnim="@anim/anim_back_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="chefpork.ppoo.chef101.fragments.CreditsFragment"
+        android:label="fragment_credits"
+        tools:layout="@layout/fragment_credits" />
+
+</navigation>

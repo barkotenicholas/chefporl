@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="chefpork.ppoo.chef101.fragments.RecipeFragment">
+
+
+    <Button
+        android:id="@+id/ingredientsButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/ingredients_button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/button_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeImageViewLarge" />
+
+    <TextView
+        android:id="@+id/recipeSelectedNameTextViewBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/comfortaa_light"
+        android:shadowColor="@color/black"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/instructionsButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/instructions_button"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/button_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsButton" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginStart="20dp"
+        android:elevation="@dimen/icon_elevation"
+        android:src="@drawable/instructions_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/instructionsButton"
+        app:layout_constraintStart_toStartOf="@+id/instructionsButton"
+        app:layout_constraintTop_toBottomOf="@+id/ingredientsButton" />
+
+    <ImageView
+        android:id="@+id/recipeImageViewLarge"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="15dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeSelectedNameTextViewBlack"
+        tools:src="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginStart="20dp"
+        android:elevation="@dimen/icon_elevation"
+        android:src="@drawable/ingredients_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/ingredientsButton"
+        app:layout_constraintStart_toStartOf="@+id/ingredientsButton"
+        app:layout_constraintTop_toTopOf="@+id/ingredientsButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

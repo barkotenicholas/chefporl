@@ -1,0 +1,10 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_color"
+    app:defaultValue="true">
+    <ListPreference
+        android:entries="@array/font_size_array_options"
+        android:entryValues="@array/font_size_array_values"
+        android:key="font_size"
+        android:title="Font Size" />
+</PreferenceScreen>

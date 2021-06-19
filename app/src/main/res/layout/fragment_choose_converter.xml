@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="chefpork.ppoo.chef101.fragments.ChooseConverterFragment">
+
+    <TextView
+        android:id="@+id/chooseUnitTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/title_top_margin"
+        android:fontFamily="@font/comfortaa_light"
+        android:shadowColor="@color/black"
+        android:shadowDx="-10"
+        android:shadowDy="10"
+        android:shadowRadius="5"
+        android:text="@string/choose_a_unit_title"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginStart="@dimen/icon_left_margin"
+        android:adjustViewBounds="true"
+        android:elevation="@dimen/icon_elevation"
+        android:src="@drawable/mass_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/massButton"
+        app:layout_constraintStart_toStartOf="@+id/massButton"
+        app:layout_constraintTop_toTopOf="@+id/massButton" />
+
+    <Button
+        android:id="@+id/massButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="75dp"
+        android:fontFamily="@font/actor"
+        android:text="@string/mass_title"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/button_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chooseUnitTitle" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginStart="@dimen/icon_left_margin"
+        android:adjustViewBounds="true"
+        android:elevation="@dimen/icon_elevation"
+        android:src="@drawable/volume_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/volumeButton"
+        app:layout_constraintStart_toStartOf="@+id/volumeButton"
+        app:layout_constraintTop_toTopOf="@+id/volumeButton" />
+
+    <Button
+        android:id="@+id/volumeButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/button_bottom_margin"
+        android:fontFamily="@font/actor"
+        android:text="@string/volume_title"
+        android:textAllCaps="false"
+        android:textSize="@dimen/button_text_size"
+        android:textStyle="bold"
+        app:cornerRadius="@dimen/button_corner_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/massButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>
